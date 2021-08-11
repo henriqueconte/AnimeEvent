@@ -19,6 +19,11 @@ class ListEventsViewController: UIViewController {
         tableView.delegate = self
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        navigationController?.navigationBar.isHidden = true
+    }
+    
     func setup(viewModel: ListEventsViewModel) {
         self.viewModel = viewModel
     }
@@ -40,8 +45,6 @@ extension ListEventsViewController: UITableViewDataSource {
         case 0:
             guard let cell: ListHeaderCellView = tableView.dequeueReusableCell(withIdentifier: ListHeaderCellView.identifier) as? ListHeaderCellView else { return UITableViewCell() }
             return cell
-//            guard let cell: ListFilterCell = tableView.dequeueReusableCell(withIdentifier: ListFilterCell.identifier) as? ListFilterCell else { return UITableViewCell() }
-//            return cell
 
         case 1:
             guard let cell: ListFilterCell = tableView.dequeueReusableCell(withIdentifier: ListFilterCell.identifier) as? ListFilterCell else { return UITableViewCell() }
@@ -61,7 +64,7 @@ extension ListEventsViewController: UITableViewDelegate {
         case 0:
             return 127
         case 1:
-            return 80
+            return 100
         default:
             return 160
         }

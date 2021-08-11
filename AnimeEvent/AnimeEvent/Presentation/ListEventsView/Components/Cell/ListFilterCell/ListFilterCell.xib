@@ -3,34 +3,72 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Xr3-eM-riS" customClass="ListFilterCell" customModule="AnimeEvent" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="107" id="Xr3-eM-riS" customClass="ListFilterCell" customModule="AnimeEvent" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="107"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Xr3-eM-riS" id="EHz-vp-W4n">
-                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                <rect key="frame" x="0.0" y="0.0" width="414" height="107"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="fVk-w5-ydg">
-                        <rect key="frame" x="10" y="0.0" width="394" height="44"/>
+                        <rect key="frame" x="10" y="42" width="394" height="65"/>
                         <textInputTraits key="textInputTraits"/>
                     </searchBar>
+                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="QLP-bq-quE">
+                        <rect key="frame" x="88.5" y="10" width="237" height="32"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Programação" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OZS-U8-UVF">
+                                <rect key="frame" x="0.0" y="0.0" width="104" height="32"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="EeI-PA-i2c">
+                                <rect key="frame" x="112" y="0.0" width="125" height="32"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ts9-iy-gXe">
+                                        <rect key="frame" x="0.0" y="0.0" width="56" height="32"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                        <state key="normal" title="[1º dia]">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NGr-xl-LKD">
+                                        <rect key="frame" x="71" y="0.0" width="54" height="32"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <state key="normal" title="[2º dia]">
+                                            <color key="titleColor" systemColor="labelColor"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                    </stackView>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="fVk-w5-ydg" firstAttribute="top" secondItem="QLP-bq-quE" secondAttribute="bottom" id="12x-qS-kPK"/>
                     <constraint firstItem="fVk-w5-ydg" firstAttribute="leading" secondItem="EHz-vp-W4n" secondAttribute="leading" constant="10" id="Pnz-8f-CNy"/>
+                    <constraint firstItem="QLP-bq-quE" firstAttribute="centerX" secondItem="EHz-vp-W4n" secondAttribute="centerX" id="dVd-BY-KyU"/>
                     <constraint firstAttribute="bottom" secondItem="fVk-w5-ydg" secondAttribute="bottom" id="f2H-0D-9Xn"/>
-                    <constraint firstItem="fVk-w5-ydg" firstAttribute="top" secondItem="EHz-vp-W4n" secondAttribute="top" id="lw4-fE-tkS"/>
+                    <constraint firstItem="QLP-bq-quE" firstAttribute="top" secondItem="EHz-vp-W4n" secondAttribute="top" constant="10" id="f67-Mu-23Q"/>
                     <constraint firstAttribute="trailing" secondItem="fVk-w5-ydg" secondAttribute="trailing" constant="10" id="x0A-Tj-uRy"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="searchBar" destination="fVk-w5-ydg" id="YCR-0e-dxA"/>
             </connections>
-            <point key="canvasLocation" x="-80" y="-82"/>
+            <point key="canvasLocation" x="-81.159420289855078" y="-61.272321428571423"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
