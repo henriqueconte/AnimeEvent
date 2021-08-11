@@ -24,11 +24,11 @@
 		80DBCD7326C17242004EC971 /* ListHeaderCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80DBCD7226C17242004EC971 /* ListHeaderCellView.xib */; };
 		80DBCD7526C17269004EC971 /* ListHeaderCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DBCD7426C17269004EC971 /* ListHeaderCellView.swift */; };
 		80DBCD7826C1739B004EC971 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DBCD7726C1739B004EC971 /* UIColor.swift */; };
-		80DBCD7E26C19B82004EC971 /* EventCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80DBCD7D26C19B82004EC971 /* EventCellView.xib */; };
 		80DBCD8026C19B8C004EC971 /* EventCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DBCD7F26C19B8C004EC971 /* EventCellView.swift */; };
 		80DBCD8326C1AA08004EC971 /* ReusableExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DBCD8226C1AA08004EC971 /* ReusableExtension.swift */; };
 		80DBCD8526C2D0A3004EC971 /* ListFilterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80DBCD8426C2D0A3004EC971 /* ListFilterCell.xib */; };
 		80DBCD8726C2D0AB004EC971 /* ListFilterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DBCD8626C2D0AB004EC971 /* ListFilterCell.swift */; };
+		80DBCD8D26C40D3A004EC971 /* EventCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80DBCD8C26C40D3A004EC971 /* EventCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,11 +51,11 @@
 		80DBCD7226C17242004EC971 /* ListHeaderCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListHeaderCellView.xib; sourceTree = "<group>"; };
 		80DBCD7426C17269004EC971 /* ListHeaderCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListHeaderCellView.swift; sourceTree = "<group>"; };
 		80DBCD7726C1739B004EC971 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
-		80DBCD7D26C19B82004EC971 /* EventCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventCellView.xib; sourceTree = "<group>"; };
 		80DBCD7F26C19B8C004EC971 /* EventCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCellView.swift; sourceTree = "<group>"; };
 		80DBCD8226C1AA08004EC971 /* ReusableExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableExtension.swift; sourceTree = "<group>"; };
 		80DBCD8426C2D0A3004EC971 /* ListFilterCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListFilterCell.xib; sourceTree = "<group>"; };
 		80DBCD8626C2D0AB004EC971 /* ListFilterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListFilterCell.swift; sourceTree = "<group>"; };
+		80DBCD8C26C40D3A004EC971 /* EventCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -211,8 +211,8 @@
 		80DBCD6F26C171F7004EC971 /* EventCell */ = {
 			isa = PBXGroup;
 			children = (
-				80DBCD7D26C19B82004EC971 /* EventCellView.xib */,
 				80DBCD7F26C19B8C004EC971 /* EventCellView.swift */,
+				80DBCD8C26C40D3A004EC971 /* EventCell.xib */,
 			);
 			path = EventCell;
 			sourceTree = "<group>";
@@ -308,9 +308,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80DBCD8D26C40D3A004EC971 /* EventCell.xib in Resources */,
 				80DBCD8526C2D0A3004EC971 /* ListFilterCell.xib in Resources */,
 				80DBCD7326C17242004EC971 /* ListHeaderCellView.xib in Resources */,
-				80DBCD7E26C19B82004EC971 /* EventCellView.xib in Resources */,
 				80DBCD4926C02962004EC971 /* LaunchScreen.storyboard in Resources */,
 				80DBCD4626C02962004EC971 /* Assets.xcassets in Resources */,
 				80DBCD4426C02960004EC971 /* Main.storyboard in Resources */,

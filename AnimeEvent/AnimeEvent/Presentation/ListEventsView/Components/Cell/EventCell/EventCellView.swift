@@ -7,7 +7,7 @@
 
 import UIKit
 
-class EventCellView: UITableViewCell {
+class EventCell: UITableViewCell {
     @IBOutlet weak private var favoriteButton: UIButton!
     @IBOutlet weak private var leftColorView: UIView!
     @IBOutlet weak private var rightColorView: UIView!
@@ -26,8 +26,8 @@ class EventCellView: UITableViewCell {
         eventSubtitleLabel.text = event.subtitle
         eventHourLabel.text = event.hour
         eventRoomLabel.text = event.room
-        blankView.rotate(angle: 30.0)
-        leftColorView.backgroundColor = backgroundColor
-        rightColorView.backgroundColor = backgroundColor
+        blankView.rotate(angle: 8.0)
+        leftColorView.backgroundColor = UIColor.ANIME.customPurple
+        rightColorView.backgroundColor = UIColor.ANIME.customPurple
     }
 }

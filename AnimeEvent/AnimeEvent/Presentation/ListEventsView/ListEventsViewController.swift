@@ -26,7 +26,7 @@ class ListEventsViewController: UIViewController {
     private func setupUI() {
         tableView.register(ListHeaderCellView.nib, forCellReuseIdentifier: ListHeaderCellView.identifier)
         tableView.register(ListFilterCell.nib, forCellReuseIdentifier: ListFilterCell.identifier)
-        tableView.register(EventCellView.nib, forCellReuseIdentifier: EventCellView.identifier)
+        tableView.register(EventCell.nib, forCellReuseIdentifier: EventCell.identifier)
     }
 }
 
@@ -47,7 +47,7 @@ extension ListEventsViewController: UITableViewDataSource {
             guard let cell: ListFilterCell = tableView.dequeueReusableCell(withIdentifier: ListFilterCell.identifier) as? ListFilterCell else { return UITableViewCell() }
             return cell
         default:
-            guard let cell: EventCellView = tableView.dequeueReusableCell(withIdentifier: EventCellView.identifier) as? EventCellView,
+            guard let cell: EventCell = tableView.dequeueReusableCell(withIdentifier: EventCell.identifier) as? EventCell,
                   let event: Event = viewModel?.eventList[indexPath.row - (viewModel?.uniqueCellsCount ?? 0)] else { return UITableViewCell() }
             cell.setup(event: event)
             return cell
@@ -63,7 +63,7 @@ extension ListEventsViewController: UITableViewDelegate {
         case 1:
             return 80
         default:
-            return 120
+            return 160
         }
     }
 }
