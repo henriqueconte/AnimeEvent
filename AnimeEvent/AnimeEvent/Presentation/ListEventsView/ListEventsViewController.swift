@@ -8,21 +8,63 @@
 import UIKit
 
 class ListEventsViewController: UIViewController {
-    @IBOutlet weak var tableView: UITableView!
+    
+    @IBOutlet weak private var tableView: UITableView!
+    private var viewModel: ListEventsViewModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupUI()
         tableView.dataSource = self
+        tableView.delegate = self
+    }
+    
+    func setup(viewModel: ListEventsViewModel) {
+        self.viewModel = viewModel
+    }
+    
+    private func setupUI() {
+        tableView.register(ListHeaderCellView.nib, forCellReuseIdentifier: ListHeaderCellView.identifier)
+        tableView.register(ListFilterCell.nib, forCellReuseIdentifier: ListFilterCell.identifier)
+        tableView.register(EventCellView.nib, forCellReuseIdentifier: EventCellView.identifier)
     }
 }
 
 extension ListEventsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return viewModel?.numberOfRows ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        switch indexPath.row {
+        case 0:
+            guard let cell: ListHeaderCellView = tableView.dequeueReusableCell(withIdentifier: ListHeaderCellView.identifier) as? ListHeaderCellView else { return UITableViewCell() }
+            return cell
+//            guard let cell: ListFilterCell = tableView.dequeueReusableCell(withIdentifier: ListFilterCell.identifier) as? ListFilterCell else { return UITableViewCell() }
+//            return cell
+
+        case 1:
+            guard let cell: ListFilterCell = tableView.dequeueReusableCell(withIdentifier: ListFilterCell.identifier) as? ListFilterCell else { return UITableViewCell() }
+            return cell
+        default:
+            guard let cell: EventCellView = tableView.dequeueReusableCell(withIdentifier: EventCellView.identifier) as? EventCellView,
+                  let event: Event = viewModel?.eventList[indexPath.row - (viewModel?.uniqueCellsCount ?? 0)] else { return UITableViewCell() }
+            cell.setup(event: event)
+            return cell
+        }
+    }
+}
+
+extension ListEventsViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        switch indexPath.row {
+        case 0:
+            return 127
+        case 1:
+            return 80
+        default:
+            return 120
+        }
     }
 }
 

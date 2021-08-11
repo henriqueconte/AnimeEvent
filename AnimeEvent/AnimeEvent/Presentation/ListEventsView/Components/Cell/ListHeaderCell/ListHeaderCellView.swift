@@ -7,6 +7,6 @@
 
 import UIKit
 
-class ListHeaderCellView: XIBView {
+class ListHeaderCellView: UITableViewCell {
     
 }

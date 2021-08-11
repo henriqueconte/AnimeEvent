@@ -21,9 +21,14 @@
 		80DBCD6A26C164AB004EC971 /* ListEventsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80DBCD6926C164AB004EC971 /* ListEventsViewController.xib */; };
 		80DBCD6C26C16763004EC971 /* ListEventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DBCD6B26C16763004EC971 /* ListEventsViewController.swift */; };
 		80DBCD6E26C16832004EC971 /* ListEventsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DBCD6D26C16832004EC971 /* ListEventsViewModel.swift */; };
-		80DBCD7326C17242004EC971 /* ListHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80DBCD7226C17242004EC971 /* ListHeaderCell.xib */; };
+		80DBCD7326C17242004EC971 /* ListHeaderCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80DBCD7226C17242004EC971 /* ListHeaderCellView.xib */; };
 		80DBCD7526C17269004EC971 /* ListHeaderCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DBCD7426C17269004EC971 /* ListHeaderCellView.swift */; };
 		80DBCD7826C1739B004EC971 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DBCD7726C1739B004EC971 /* UIColor.swift */; };
+		80DBCD7E26C19B82004EC971 /* EventCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80DBCD7D26C19B82004EC971 /* EventCellView.xib */; };
+		80DBCD8026C19B8C004EC971 /* EventCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DBCD7F26C19B8C004EC971 /* EventCellView.swift */; };
+		80DBCD8326C1AA08004EC971 /* ReusableExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DBCD8226C1AA08004EC971 /* ReusableExtension.swift */; };
+		80DBCD8526C2D0A3004EC971 /* ListFilterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80DBCD8426C2D0A3004EC971 /* ListFilterCell.xib */; };
+		80DBCD8726C2D0AB004EC971 /* ListFilterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DBCD8626C2D0AB004EC971 /* ListFilterCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,9 +48,14 @@
 		80DBCD6926C164AB004EC971 /* ListEventsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListEventsViewController.xib; sourceTree = "<group>"; };
 		80DBCD6B26C16763004EC971 /* ListEventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListEventsViewController.swift; sourceTree = "<group>"; };
 		80DBCD6D26C16832004EC971 /* ListEventsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListEventsViewModel.swift; sourceTree = "<group>"; };
-		80DBCD7226C17242004EC971 /* ListHeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListHeaderCell.xib; sourceTree = "<group>"; };
+		80DBCD7226C17242004EC971 /* ListHeaderCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListHeaderCellView.xib; sourceTree = "<group>"; };
 		80DBCD7426C17269004EC971 /* ListHeaderCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListHeaderCellView.swift; sourceTree = "<group>"; };
 		80DBCD7726C1739B004EC971 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		80DBCD7D26C19B82004EC971 /* EventCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventCellView.xib; sourceTree = "<group>"; };
+		80DBCD7F26C19B8C004EC971 /* EventCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCellView.swift; sourceTree = "<group>"; };
+		80DBCD8226C1AA08004EC971 /* ReusableExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableExtension.swift; sourceTree = "<group>"; };
+		80DBCD8426C2D0A3004EC971 /* ListFilterCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListFilterCell.xib; sourceTree = "<group>"; };
+		80DBCD8626C2D0AB004EC971 /* ListFilterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListFilterCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +106,7 @@
 		80DBCD5026C02A17004EC971 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				80DBCD8126C1A9FE004EC971 /* Reusable */,
 				80DBCD7626C1738E004EC971 /* UIColor */,
 				80DBCD5526C02AF0004EC971 /* UIView */,
 			);
@@ -200,6 +211,8 @@
 		80DBCD6F26C171F7004EC971 /* EventCell */ = {
 			isa = PBXGroup;
 			children = (
+				80DBCD7D26C19B82004EC971 /* EventCellView.xib */,
+				80DBCD7F26C19B8C004EC971 /* EventCellView.swift */,
 			);
 			path = EventCell;
 			sourceTree = "<group>";
@@ -207,6 +220,8 @@
 		80DBCD7026C171FD004EC971 /* ListFilterCell */ = {
 			isa = PBXGroup;
 			children = (
+				80DBCD8426C2D0A3004EC971 /* ListFilterCell.xib */,
+				80DBCD8626C2D0AB004EC971 /* ListFilterCell.swift */,
 			);
 			path = ListFilterCell;
 			sourceTree = "<group>";
@@ -214,7 +229,7 @@
 		80DBCD7126C17207004EC971 /* ListHeaderCell */ = {
 			isa = PBXGroup;
 			children = (
-				80DBCD7226C17242004EC971 /* ListHeaderCell.xib */,
+				80DBCD7226C17242004EC971 /* ListHeaderCellView.xib */,
 				80DBCD7426C17269004EC971 /* ListHeaderCellView.swift */,
 			);
 			path = ListHeaderCell;
@@ -226,6 +241,14 @@
 				80DBCD7726C1739B004EC971 /* UIColor.swift */,
 			);
 			path = UIColor;
+			sourceTree = "<group>";
+		};
+		80DBCD8126C1A9FE004EC971 /* Reusable */ = {
+			isa = PBXGroup;
+			children = (
+				80DBCD8226C1AA08004EC971 /* ReusableExtension.swift */,
+			);
+			path = Reusable;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -285,7 +308,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				80DBCD7326C17242004EC971 /* ListHeaderCell.xib in Resources */,
+				80DBCD8526C2D0A3004EC971 /* ListFilterCell.xib in Resources */,
+				80DBCD7326C17242004EC971 /* ListHeaderCellView.xib in Resources */,
+				80DBCD7E26C19B82004EC971 /* EventCellView.xib in Resources */,
 				80DBCD4926C02962004EC971 /* LaunchScreen.storyboard in Resources */,
 				80DBCD4626C02962004EC971 /* Assets.xcassets in Resources */,
 				80DBCD4426C02960004EC971 /* Main.storyboard in Resources */,
@@ -300,6 +325,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80DBCD8026C19B8C004EC971 /* EventCellView.swift in Sources */,
 				80DBCD5826C02B15004EC971 /* UIViewExtension.swift in Sources */,
 				80DBCD7826C1739B004EC971 /* UIColor.swift in Sources */,
 				80DBCD4126C02960004EC971 /* ViewController.swift in Sources */,
@@ -308,9 +334,11 @@
 				80DBCD6C26C16763004EC971 /* ListEventsViewController.swift in Sources */,
 				80DBCD3F26C02960004EC971 /* SceneDelegate.swift in Sources */,
 				80DBCD6426C15F51004EC971 /* EventsMock.swift in Sources */,
+				80DBCD8326C1AA08004EC971 /* ReusableExtension.swift in Sources */,
 				80DBCD5E26C02C57004EC971 /* Event.swift in Sources */,
 				80DBCD7526C17269004EC971 /* ListHeaderCellView.swift in Sources */,
 				80DBCD5B26C02BD1004EC971 /* Participant.swift in Sources */,
+				80DBCD8726C2D0AB004EC971 /* ListFilterCell.swift in Sources */,
 				80DBCD6E26C16832004EC971 /* ListEventsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

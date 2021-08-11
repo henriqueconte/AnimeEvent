@@ -26,4 +26,10 @@ extension UIView {
         maskLayer.path = maskPath.cgPath
         layer.mask = maskLayer
     }
+    
+    func rotate(angle: CGFloat) {
+        let radians: CGFloat = angle / 180 * CGFloat.pi
+        let rotationTransform: CGAffineTransform = CGAffineTransform(rotationAngle: radians)
+        transform = rotationTransform
+    }
 }

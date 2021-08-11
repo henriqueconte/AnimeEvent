@@ -9,4 +9,15 @@ import Foundation
 
 class ListEventsViewModel {
     
+    var eventList: [Event] {
+        return EventsMock.eventList
+    }
+    
+    var uniqueCellsCount: Int {
+        return 2
+    }
+    
+    var numberOfRows: Int {
+        return uniqueCellsCount + eventList.count
+    }
 }
