@@ -32,4 +32,13 @@ extension UIView {
         let rotationTransform: CGAffineTransform = CGAffineTransform(rotationAngle: radians)
         transform = rotationTransform
     }
+    
+    func setGradientBackground(topColor: CGColor, bottomColor: CGColor) {
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.colors = [topColor, bottomColor]
+        gradientLayer.locations = [0.0, 1.0]
+        gradientLayer.frame = bounds
+                
+        layer.insertSublayer(gradientLayer, at: 0)
+    }
 }
