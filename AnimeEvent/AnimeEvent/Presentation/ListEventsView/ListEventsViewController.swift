@@ -32,6 +32,9 @@ class ListEventsViewController: UIViewController {
         tableView.register(ListHeaderCellView.nib, forCellReuseIdentifier: ListHeaderCellView.identifier)
         tableView.register(ListFilterCell.nib, forCellReuseIdentifier: ListFilterCell.identifier)
         tableView.register(EventCell.nib, forCellReuseIdentifier: EventCell.identifier)
+        navigationController?.navigationBar.barTintColor = UIColor.ANIME.customRed
+        navigationController?.navigationBar.tintColor = .white
+        title = "Home"
     }
 }
 
@@ -71,8 +74,12 @@ extension ListEventsViewController: UITableViewDelegate {
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let eventDetailsVC: EventDetailsViewController = EventDetailsViewController()
-        show(eventDetailsVC, sender: nil)
+        if indexPath.row > 1,
+           let selectedEvent: Event = viewModel?.eventList[indexPath.row - (viewModel?.uniqueCellsCount ?? 0)] {
+            let eventDetailsVC: EventDetailsViewController = EventDetailsViewController()
+            eventDetailsVC.setup(viewModel: EventDetailsViewModel(event: selectedEvent))
+            show(eventDetailsVC, sender: nil)
+        }
     }
 }
 

@@ -12,6 +12,15 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EventDetailsViewController" customModule="AnimeEvent" customModuleProvider="target">
             <connections>
+                <outlet property="eventDescriptionLabel" destination="ARV-If-aia" id="iW3-Iu-xfx"/>
+                <outlet property="eventDescriptionView" destination="NED-hr-zQZ" id="NI9-0K-TwK"/>
+                <outlet property="eventHourLabel" destination="1Z3-0r-uet" id="VtO-I2-EUe"/>
+                <outlet property="eventImage" destination="4EW-O6-495" id="HSP-L8-2g8"/>
+                <outlet property="eventInscriptionLabel" destination="laC-cG-GlC" id="Kcn-Am-2kP"/>
+                <outlet property="eventLocationImage" destination="DES-qA-bhq" id="paI-bq-6X6"/>
+                <outlet property="eventRoomLabel" destination="NYP-jL-CFe" id="iRq-tB-Ab7"/>
+                <outlet property="eventTitleLabel" destination="Y6b-vL-gkN" id="Zdy-iz-Z1g"/>
+                <outlet property="favoriteButton" destination="8fv-43-xf4" id="3Fs-3g-Taq"/>
                 <outlet property="view" destination="iN0-l3-epB" id="gCz-No-Yqq"/>
             </connections>
         </placeholder>

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		800A2EBE26C4605E0062042D /* EventDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800A2EBD26C4605E0062042D /* EventDetailsViewModel.swift */; };
 		805B347026C43EBB008A3BC5 /* EventDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 805B346F26C43EBB008A3BC5 /* EventDetailsViewController.xib */; };
 		805B347226C43EC3008A3BC5 /* EventDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805B347126C43EC3008A3BC5 /* EventDetailsViewController.swift */; };
 		80DBCD3D26C02960004EC971 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DBCD3C26C02960004EC971 /* AppDelegate.swift */; };
@@ -34,6 +35,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		800A2EBD26C4605E0062042D /* EventDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailsViewModel.swift; sourceTree = "<group>"; };
 		805B346F26C43EBB008A3BC5 /* EventDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventDetailsViewController.xib; sourceTree = "<group>"; };
 		805B347126C43EC3008A3BC5 /* EventDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailsViewController.swift; sourceTree = "<group>"; };
 		80DBCD3926C02960004EC971 /* AnimeEvent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimeEvent.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -78,6 +80,7 @@
 			children = (
 				805B346F26C43EBB008A3BC5 /* EventDetailsViewController.xib */,
 				805B347126C43EC3008A3BC5 /* EventDetailsViewController.swift */,
+				800A2EBD26C4605E0062042D /* EventDetailsViewModel.swift */,
 			);
 			path = EventDetails;
 			sourceTree = "<group>";
@@ -340,6 +343,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				800A2EBE26C4605E0062042D /* EventDetailsViewModel.swift in Sources */,
 				80DBCD8026C19B8C004EC971 /* EventCell.swift in Sources */,
 				80DBCD5826C02B15004EC971 /* UIViewExtension.swift in Sources */,
 				80DBCD7826C1739B004EC971 /* UIColor.swift in Sources */,
