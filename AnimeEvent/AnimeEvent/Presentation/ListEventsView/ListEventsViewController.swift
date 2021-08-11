@@ -69,6 +69,11 @@ extension ListEventsViewController: UITableViewDelegate {
             return 160
         }
     }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let eventDetailsVC: EventDetailsViewController = EventDetailsViewController()
+        show(eventDetailsVC, sender: nil)
+    }
 }
 
 

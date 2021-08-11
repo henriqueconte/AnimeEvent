@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		805B347026C43EBB008A3BC5 /* EventDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 805B346F26C43EBB008A3BC5 /* EventDetailsViewController.xib */; };
+		805B347226C43EC3008A3BC5 /* EventDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805B347126C43EC3008A3BC5 /* EventDetailsViewController.swift */; };
 		80DBCD3D26C02960004EC971 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DBCD3C26C02960004EC971 /* AppDelegate.swift */; };
 		80DBCD3F26C02960004EC971 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DBCD3E26C02960004EC971 /* SceneDelegate.swift */; };
 		80DBCD4126C02960004EC971 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DBCD4026C02960004EC971 /* ViewController.swift */; };
@@ -32,6 +34,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		805B346F26C43EBB008A3BC5 /* EventDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventDetailsViewController.xib; sourceTree = "<group>"; };
+		805B347126C43EC3008A3BC5 /* EventDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailsViewController.swift; sourceTree = "<group>"; };
 		80DBCD3926C02960004EC971 /* AnimeEvent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimeEvent.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80DBCD3C26C02960004EC971 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		80DBCD3E26C02960004EC971 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +73,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		805B346E26C43BBA008A3BC5 /* EventDetails */ = {
+			isa = PBXGroup;
+			children = (
+				805B346F26C43EBB008A3BC5 /* EventDetailsViewController.xib */,
+				805B347126C43EC3008A3BC5 /* EventDetailsViewController.swift */,
+			);
+			path = EventDetails;
+			sourceTree = "<group>";
+		};
 		80DBCD3026C02960004EC971 = {
 			isa = PBXGroup;
 			children = (
@@ -125,6 +138,7 @@
 		80DBCD5226C02A66004EC971 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				805B346E26C43BBA008A3BC5 /* EventDetails */,
 				80DBCD6526C163CE004EC971 /* ListEventsView */,
 			);
 			path = Presentation;
@@ -314,6 +328,7 @@
 				80DBCD4926C02962004EC971 /* LaunchScreen.storyboard in Resources */,
 				80DBCD4626C02962004EC971 /* Assets.xcassets in Resources */,
 				80DBCD4426C02960004EC971 /* Main.storyboard in Resources */,
+				805B347026C43EBB008A3BC5 /* EventDetailsViewController.xib in Resources */,
 				80DBCD6A26C164AB004EC971 /* ListEventsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -329,6 +344,7 @@
 				80DBCD5826C02B15004EC971 /* UIViewExtension.swift in Sources */,
 				80DBCD7826C1739B004EC971 /* UIColor.swift in Sources */,
 				80DBCD4126C02960004EC971 /* ViewController.swift in Sources */,
+				805B347226C43EC3008A3BC5 /* EventDetailsViewController.swift in Sources */,
 				80DBCD3D26C02960004EC971 /* AppDelegate.swift in Sources */,
 				80DBCD5426C02AA9004EC971 /* XIBView.swift in Sources */,
 				80DBCD6C26C16763004EC971 /* ListEventsViewController.swift in Sources */,

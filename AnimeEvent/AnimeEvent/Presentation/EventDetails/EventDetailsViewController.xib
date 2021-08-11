@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EventDetailsViewController" customModule="AnimeEvent" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="iN0-l3-epB" id="gCz-No-Yqq"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cIx-XL-hhu">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lXT-su-vof">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="953.5"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Inscrição Concurso Cosplay" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y6b-vL-gkN">
+                                    <rect key="frame" x="99" y="20" width="216" height="19.5"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NED-hr-zQZ">
+                                    <rect key="frame" x="0.0" y="79.5" width="414" height="260"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8fv-43-xf4">
+                                            <rect key="frame" x="18" y="18" width="30" height="28"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="28" id="2A7-26-DPa"/>
+                                                <constraint firstAttribute="width" constant="30" id="bOQ-ov-krh"/>
+                                            </constraints>
+                                            <color key="tintColor" name="customRed"/>
+                                            <state key="normal">
+                                                <imageReference key="image" image="heart" catalog="system" symbolScale="large"/>
+                                            </state>
+                                        </button>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cosplayPoster_big" translatesAutoresizingMaskIntoConstraints="NO" id="4EW-O6-495">
+                                            <rect key="frame" x="38" y="0.0" width="150" height="260"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="150" id="jyt-ba-H2V"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="O que é?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VMh-C6-Cis">
+                                            <rect key="frame" x="208" y="18" width="186" height="19.5"/>
+                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ARV-If-aia">
+                                            <rect key="frame" x="208" y="51.5" width="186" height="129"/>
+                                            <string key="text">O concurso cosplay é um evento que acontece em todas as edições do AnimeXtreme. Ele une a vontade de fazer um cosplay impecável com a oportunidade de apresentar ele pro resto do pessoal! Além disso, os vencedores ganham prêmios!</string>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" name="customPurple"/>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="VMh-C6-Cis" secondAttribute="trailing" constant="20" id="0yW-cr-rpF"/>
+                                        <constraint firstItem="4EW-O6-495" firstAttribute="leading" secondItem="8fv-43-xf4" secondAttribute="trailing" constant="-10" id="2Dj-dc-jwC"/>
+                                        <constraint firstItem="ARV-If-aia" firstAttribute="top" secondItem="VMh-C6-Cis" secondAttribute="bottom" constant="14" id="91P-uo-MEo"/>
+                                        <constraint firstAttribute="trailing" secondItem="ARV-If-aia" secondAttribute="trailing" constant="20" id="ASF-YA-zsW"/>
+                                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="ARV-If-aia" secondAttribute="bottom" constant="15" id="BRn-Jl-Nqk"/>
+                                        <constraint firstItem="4EW-O6-495" firstAttribute="top" secondItem="NED-hr-zQZ" secondAttribute="top" id="H77-xw-2bR"/>
+                                        <constraint firstItem="VMh-C6-Cis" firstAttribute="top" secondItem="8fv-43-xf4" secondAttribute="top" id="auW-KT-qZQ"/>
+                                        <constraint firstAttribute="bottom" secondItem="4EW-O6-495" secondAttribute="bottom" id="axi-wL-epp"/>
+                                        <constraint firstItem="8fv-43-xf4" firstAttribute="leading" secondItem="NED-hr-zQZ" secondAttribute="leading" constant="18" id="bvJ-sr-zal"/>
+                                        <constraint firstAttribute="height" constant="260" id="glF-Rr-fL6"/>
+                                        <constraint firstItem="ARV-If-aia" firstAttribute="leading" secondItem="4EW-O6-495" secondAttribute="trailing" constant="20" id="iHf-er-7nR"/>
+                                        <constraint firstItem="VMh-C6-Cis" firstAttribute="leading" secondItem="4EW-O6-495" secondAttribute="trailing" constant="20" id="raz-1y-0pQ"/>
+                                        <constraint firstItem="8fv-43-xf4" firstAttribute="top" secondItem="NED-hr-zQZ" secondAttribute="top" constant="18" id="yaz-Td-2KX"/>
+                                    </constraints>
+                                </view>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sobre a inscrição" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tUB-kk-BsZ">
+                                    <rect key="frame" x="143" y="357.5" width="128" height="19.5"/>
+                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="laC-cG-GlC">
+                                    <rect key="frame" x="38" y="397" width="338" height="142.5"/>
+                                    <string key="text">Para se inscrever é muito simples. Vá até a sala 01 e leve consigo o nome do seu personagem, que de anime ele é e seus dados pessoais (nome, idade e CPF). Categorias: Infantil - feminino e masculino Adulto - feminino Adulto - masculino Adulto - grupos Inscrições das 10h as 14h</string>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HCl-iz-evv">
+                                    <rect key="frame" x="0.0" y="569.5" width="414" height="54"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="80" translatesAutoresizingMaskIntoConstraints="NO" id="aou-jh-i7p">
+                                            <rect key="frame" x="80" y="17" width="254" height="20.5"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Z3-0r-uet">
+                                                    <rect key="frame" x="0.0" y="0.0" width="87" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sala 01" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NYP-jL-CFe">
+                                                    <rect key="frame" x="167" y="0.0" width="87" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <color key="backgroundColor" name="customPurple"/>
+                                    <constraints>
+                                        <constraint firstItem="aou-jh-i7p" firstAttribute="centerY" secondItem="HCl-iz-evv" secondAttribute="centerY" id="2mG-E4-DCi"/>
+                                        <constraint firstAttribute="height" constant="54" id="4aU-wq-HlY"/>
+                                        <constraint firstAttribute="trailing" secondItem="aou-jh-i7p" secondAttribute="trailing" constant="80" id="iyP-rv-Oia"/>
+                                        <constraint firstItem="aou-jh-i7p" firstAttribute="leading" secondItem="HCl-iz-evv" secondAttribute="leading" constant="80" id="wSl-JS-rxq"/>
+                                    </constraints>
+                                </view>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mapLocation" translatesAutoresizingMaskIntoConstraints="NO" id="DES-qA-bhq">
+                                    <rect key="frame" x="30" y="643.5" width="354" height="300"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="300" id="1o9-Og-N5y"/>
+                                    </constraints>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="DES-qA-bhq" secondAttribute="bottom" constant="10" id="3rx-Mp-gw4"/>
+                                <constraint firstItem="DES-qA-bhq" firstAttribute="leading" secondItem="lXT-su-vof" secondAttribute="leading" constant="30" id="9tx-El-mnJ"/>
+                                <constraint firstItem="tUB-kk-BsZ" firstAttribute="centerX" secondItem="lXT-su-vof" secondAttribute="centerX" id="D89-Sd-cMb"/>
+                                <constraint firstItem="NED-hr-zQZ" firstAttribute="top" secondItem="Y6b-vL-gkN" secondAttribute="bottom" constant="40" id="DYA-iC-f0l"/>
+                                <constraint firstAttribute="trailing" secondItem="HCl-iz-evv" secondAttribute="trailing" id="Ea2-Ft-atD"/>
+                                <constraint firstItem="Y6b-vL-gkN" firstAttribute="centerX" secondItem="lXT-su-vof" secondAttribute="centerX" id="HFm-zf-lBM"/>
+                                <constraint firstAttribute="trailing" secondItem="laC-cG-GlC" secondAttribute="trailing" constant="38" id="HRc-PF-1om"/>
+                                <constraint firstItem="tUB-kk-BsZ" firstAttribute="top" secondItem="NED-hr-zQZ" secondAttribute="bottom" constant="18" id="KNu-RU-QY7"/>
+                                <constraint firstItem="HCl-iz-evv" firstAttribute="leading" secondItem="lXT-su-vof" secondAttribute="leading" id="M65-IT-eHZ"/>
+                                <constraint firstItem="laC-cG-GlC" firstAttribute="top" secondItem="tUB-kk-BsZ" secondAttribute="bottom" constant="20" id="MgK-Se-yw5"/>
+                                <constraint firstAttribute="trailing" secondItem="NED-hr-zQZ" secondAttribute="trailing" id="ODG-M5-ras"/>
+                                <constraint firstItem="DES-qA-bhq" firstAttribute="top" secondItem="HCl-iz-evv" secondAttribute="bottom" constant="20" id="PTB-mA-NNY"/>
+                                <constraint firstItem="laC-cG-GlC" firstAttribute="leading" secondItem="lXT-su-vof" secondAttribute="leading" constant="38" id="SPc-YG-gey"/>
+                                <constraint firstAttribute="trailing" secondItem="DES-qA-bhq" secondAttribute="trailing" constant="30" id="TWN-5N-nT4"/>
+                                <constraint firstItem="Y6b-vL-gkN" firstAttribute="top" secondItem="lXT-su-vof" secondAttribute="top" constant="20" id="Zob-mG-Kil"/>
+                                <constraint firstItem="HCl-iz-evv" firstAttribute="top" secondItem="laC-cG-GlC" secondAttribute="bottom" constant="30" id="qfp-55-Dcq"/>
+                                <constraint firstItem="NED-hr-zQZ" firstAttribute="leading" secondItem="lXT-su-vof" secondAttribute="leading" id="tl4-fs-tdD"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="lXT-su-vof" firstAttribute="leading" secondItem="zSU-8O-GxB" secondAttribute="leading" id="0dR-nw-WIL"/>
+                        <constraint firstItem="lXT-su-vof" firstAttribute="width" secondItem="1Hi-uo-G6O" secondAttribute="width" id="2Xp-Cd-qjx"/>
+                        <constraint firstItem="lXT-su-vof" firstAttribute="trailing" secondItem="zSU-8O-GxB" secondAttribute="trailing" id="4Nw-i4-iHA"/>
+                        <constraint firstItem="lXT-su-vof" firstAttribute="top" secondItem="zSU-8O-GxB" secondAttribute="top" id="JMx-6j-wtq"/>
+                        <constraint firstItem="lXT-su-vof" firstAttribute="bottom" secondItem="zSU-8O-GxB" secondAttribute="bottom" id="U6Y-7d-ypt"/>
+                    </constraints>
+                    <viewLayoutGuide key="contentLayoutGuide" id="zSU-8O-GxB"/>
+                    <viewLayoutGuide key="frameLayoutGuide" id="1Hi-uo-G6O"/>
+                </scrollView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="cIx-XL-hhu" secondAttribute="bottom" id="3UA-OH-H38"/>
+                <constraint firstItem="cIx-XL-hhu" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="XRp-T9-ppI"/>
+                <constraint firstItem="cIx-XL-hhu" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="bzq-EQ-Uif"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="cIx-XL-hhu" secondAttribute="trailing" id="lXI-U2-lxO"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="138.61607142857142"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="cosplayPoster_big" width="156" height="260"/>
+        <image name="heart" catalog="system" width="128" height="109"/>
+        <image name="mapLocation" width="1282" height="1166"/>
+        <namedColor name="customPurple">
+            <color red="0.72549019607843135" green="0.72549019607843135" blue="0.8784313725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="customRed">
+            <color red="0.83921568627450982" green="0.16862745098039217" blue="0.16862745098039217" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
