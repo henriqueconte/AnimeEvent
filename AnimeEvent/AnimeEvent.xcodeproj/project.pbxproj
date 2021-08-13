@@ -10,7 +10,8 @@
 		800A2EBE26C4605E0062042D /* EventDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800A2EBD26C4605E0062042D /* EventDetailsViewModel.swift */; };
 		800A2EC126C6B46C0062042D /* EventLocationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 800A2EC026C6B46C0062042D /* EventLocationViewController.xib */; };
 		800A2EC326C6B4760062042D /* EventLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800A2EC226C6B4760062042D /* EventLocationViewController.swift */; };
-		800A2EC526C6B47C0062042D /* EventLocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800A2EC426C6B47C0062042D /* EventLocationViewModel.swift */; };
+		800A2EC926C6C1250062042D /* EventHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 800A2EC826C6C1250062042D /* EventHeaderView.xib */; };
+		800A2ECB26C6C13B0062042D /* EventHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800A2ECA26C6C13B0062042D /* EventHeaderView.swift */; };
 		805B347026C43EBB008A3BC5 /* EventDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 805B346F26C43EBB008A3BC5 /* EventDetailsViewController.xib */; };
 		805B347226C43EC3008A3BC5 /* EventDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805B347126C43EC3008A3BC5 /* EventDetailsViewController.swift */; };
 		80DBCD3D26C02960004EC971 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DBCD3C26C02960004EC971 /* AppDelegate.swift */; };
@@ -41,7 +42,8 @@
 		800A2EBD26C4605E0062042D /* EventDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailsViewModel.swift; sourceTree = "<group>"; };
 		800A2EC026C6B46C0062042D /* EventLocationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventLocationViewController.xib; sourceTree = "<group>"; };
 		800A2EC226C6B4760062042D /* EventLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventLocationViewController.swift; sourceTree = "<group>"; };
-		800A2EC426C6B47C0062042D /* EventLocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventLocationViewModel.swift; sourceTree = "<group>"; };
+		800A2EC826C6C1250062042D /* EventHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventHeaderView.xib; sourceTree = "<group>"; };
+		800A2ECA26C6C13B0062042D /* EventHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventHeaderView.swift; sourceTree = "<group>"; };
 		805B346F26C43EBB008A3BC5 /* EventDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventDetailsViewController.xib; sourceTree = "<group>"; };
 		805B347126C43EC3008A3BC5 /* EventDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailsViewController.swift; sourceTree = "<group>"; };
 		80DBCD3926C02960004EC971 /* AnimeEvent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimeEvent.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -86,9 +88,25 @@
 			children = (
 				800A2EC026C6B46C0062042D /* EventLocationViewController.xib */,
 				800A2EC226C6B4760062042D /* EventLocationViewController.swift */,
-				800A2EC426C6B47C0062042D /* EventLocationViewModel.swift */,
 			);
 			path = EventLocation;
+			sourceTree = "<group>";
+		};
+		800A2EC626C6C1120062042D /* SharedComponents */ = {
+			isa = PBXGroup;
+			children = (
+				800A2EC726C6C1180062042D /* EventHeaderView */,
+			);
+			path = SharedComponents;
+			sourceTree = "<group>";
+		};
+		800A2EC726C6C1180062042D /* EventHeaderView */ = {
+			isa = PBXGroup;
+			children = (
+				800A2EC826C6C1250062042D /* EventHeaderView.xib */,
+				800A2ECA26C6C13B0062042D /* EventHeaderView.swift */,
+			);
+			path = EventHeaderView;
 			sourceTree = "<group>";
 		};
 		805B346E26C43BBA008A3BC5 /* EventDetails */ = {
@@ -157,6 +175,7 @@
 		80DBCD5226C02A66004EC971 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				800A2EC626C6C1120062042D /* SharedComponents */,
 				800A2EBF26C6B4550062042D /* EventLocation */,
 				805B346E26C43BBA008A3BC5 /* EventDetails */,
 				80DBCD6526C163CE004EC971 /* ListEventsView */,
@@ -220,16 +239,8 @@
 			isa = PBXGroup;
 			children = (
 				80DBCD6826C16483004EC971 /* Cell */,
-				80DBCD6726C1647E004EC971 /* View */,
 			);
 			path = Components;
-			sourceTree = "<group>";
-		};
-		80DBCD6726C1647E004EC971 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		80DBCD6826C16483004EC971 /* Cell */ = {
@@ -346,6 +357,7 @@
 				80DBCD8526C2D0A3004EC971 /* ListFilterCell.xib in Resources */,
 				80DBCD7326C17242004EC971 /* ListHeaderCellView.xib in Resources */,
 				80DBCD4926C02962004EC971 /* LaunchScreen.storyboard in Resources */,
+				800A2EC926C6C1250062042D /* EventHeaderView.xib in Resources */,
 				80DBCD4626C02962004EC971 /* Assets.xcassets in Resources */,
 				80DBCD4426C02960004EC971 /* Main.storyboard in Resources */,
 				800A2EC126C6B46C0062042D /* EventLocationViewController.xib in Resources */,
@@ -362,7 +374,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				800A2EBE26C4605E0062042D /* EventDetailsViewModel.swift in Sources */,
-				800A2EC526C6B47C0062042D /* EventLocationViewModel.swift in Sources */,
 				80DBCD8026C19B8C004EC971 /* EventCell.swift in Sources */,
 				800A2EC326C6B4760062042D /* EventLocationViewController.swift in Sources */,
 				80DBCD5826C02B15004EC971 /* UIViewExtension.swift in Sources */,
@@ -379,6 +390,7 @@
 				80DBCD7526C17269004EC971 /* ListHeaderCellView.swift in Sources */,
 				80DBCD5B26C02BD1004EC971 /* Participant.swift in Sources */,
 				80DBCD8726C2D0AB004EC971 /* ListFilterCell.swift in Sources */,
+				800A2ECB26C6C13B0062042D /* EventHeaderView.swift in Sources */,
 				80DBCD6E26C16832004EC971 /* ListEventsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

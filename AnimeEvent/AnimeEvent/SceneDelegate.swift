@@ -25,8 +25,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let listEventsVC: ListEventsViewController = ListEventsViewController()
         listEventsVC.setup(viewModel: ListEventsViewModel())
 
-        listEventsVC.tabBarItem = UITabBarItem(title: nil, image: UIImage(named: "home"), tag: 0)
-        eventLocationVC.tabBarItem = UITabBarItem(title: nil, image: UIImage(named: "map"), tag: 1)
+        listEventsVC.tabBarItem = UITabBarItem(title: "Home", image: UIImage(named: "home"), tag: 0)
+        eventLocationVC.tabBarItem = UITabBarItem(title: "Local", image: UIImage(named: "map"), tag: 1)
         tabBarController.setViewControllers([UINavigationController(rootViewController: listEventsVC), eventLocationVC], animated: false)
         window?.rootViewController = tabBarController
         window?.makeKeyAndVisible()
