@@ -34,6 +34,11 @@ class ListEventsViewController: UIViewController {
         tableView.register(EventCell.nib, forCellReuseIdentifier: EventCell.identifier)
         navigationController?.navigationBar.barTintColor = UIColor.ANIME.customRed
         navigationController?.navigationBar.tintColor = .white
+        navigationController?.navigationBar.isTranslucent = false
+        tabBarController?.tabBar.isTranslucent = false
+        tabBarController?.tabBar.barTintColor = UIColor.ANIME.customRed
+        tabBarController?.tabBar.tintColor = .white
+        tabBarController?.tabBar.unselectedItemTintColor = .systemGray4
         title = "Home"
     }
 }

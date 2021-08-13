@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Item-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AnimeEvent" customModuleProvider="target" sceneMemberID="viewController">
@@ -18,11 +18,12 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="J8y-O4-7lk"/>
                     <navigationItem key="navigationItem" id="n2e-Hf-yqt"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="124"/>
+            <point key="canvasLocation" x="-572" y="124"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dQS-JP-bHB">
@@ -33,12 +34,12 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="buL-1G-rx5"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="bH6-7W-weJ"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7nb-13-l5Y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-593" y="124"/>
+            <point key="canvasLocation" x="-1516" y="124"/>
         </scene>
     </scenes>
     <resources>
