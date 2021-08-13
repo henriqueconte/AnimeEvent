@@ -19,7 +19,7 @@ class EventCell: UITableViewCell {
     @IBOutlet weak private var blankView: UIView!
     @IBOutlet weak private var shadowView: UIView!
     
-    func setup(event: Event) {
+    func setupEvent(event: Event) {
         favoriteButton.setImage(UIImage(named: "heart.fill"), for: .selected)
         favoriteButton.isSelected = event.isFavorite
         eventImage.image = UIImage(named: event.locationPhotoPath)
@@ -30,12 +30,20 @@ class EventCell: UITableViewCell {
         blankView.rotate(angle: 8.0)
         leftColorView.backgroundColor = UIColor.ANIME.customPurple
         rightColorView.backgroundColor = UIColor.ANIME.customPurple
-//        shadowView.layer.shadowRadius = 6.0
-//        shadowView.layer.shadowOffset = CGSize(width: 0, height: 3.0)
-//        shadowView.layer.shadowColor = UIColor.systemGray5.cgColor
-//        shadowView.layer.shadowOpacity = 1.0
-//        shadowView.layer.shadowPath = UIBezierPath(roundedRect: shadowView.bounds, cornerRadius: 10).cgPath
-//        shadowView.layer.masksToBounds = false
+        shadowView.setGradientBackground(topColor: UIColor.systemGray5.cgColor, bottomColor: UIColor.white.cgColor)
+    }
+    
+    func setupNews(event: Event) {
+        favoriteButton.isHidden = true
+        eventImage.image = UIImage(named: event.locationPhotoPath)
+        eventTitleLabel.text = event.title
+        eventSubtitleLabel.text = event.subtitle
+        blankView.isHidden = true
+        leftColorView.backgroundColor = UIColor.ANIME.customGray
+        eventHourLabel.isHidden = true
+        eventRoomLabel.text = event.hour
+        eventRoomLabel.font = .systemFont(ofSize: 12, weight: .light)
+        rightColorView.backgroundColor = .white
         shadowView.setGradientBackground(topColor: UIColor.systemGray5.cgColor, bottomColor: UIColor.white.cgColor)
     }
 }

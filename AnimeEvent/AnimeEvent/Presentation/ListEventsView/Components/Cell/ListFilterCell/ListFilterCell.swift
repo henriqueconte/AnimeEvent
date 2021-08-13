@@ -9,5 +9,13 @@ import UIKit
 
 class ListFilterCell: UITableViewCell {
     
+    @IBOutlet weak private var titleLabel: UILabel!
+    @IBOutlet weak private var buttonsStack: UIStackView!
     @IBOutlet weak private var searchBar: UISearchBar!
+    
+    func setupNews() {
+        titleLabel.text = "Notícias"
+        buttonsStack.isHidden = true
+        searchBar.isHidden = true
+    }
 }

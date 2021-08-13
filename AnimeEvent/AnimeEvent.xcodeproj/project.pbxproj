@@ -12,6 +12,9 @@
 		800A2EC326C6B4760062042D /* EventLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800A2EC226C6B4760062042D /* EventLocationViewController.swift */; };
 		800A2EC926C6C1250062042D /* EventHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 800A2EC826C6C1250062042D /* EventHeaderView.xib */; };
 		800A2ECB26C6C13B0062042D /* EventHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800A2ECA26C6C13B0062042D /* EventHeaderView.swift */; };
+		800A2ED026C6C5560062042D /* NewsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 800A2ECF26C6C5560062042D /* NewsViewController.xib */; };
+		800A2ED226C6C6170062042D /* NewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800A2ED126C6C6170062042D /* NewsViewModel.swift */; };
+		800A2ED426C6C61F0062042D /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800A2ED326C6C61F0062042D /* NewsViewController.swift */; };
 		805B347026C43EBB008A3BC5 /* EventDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 805B346F26C43EBB008A3BC5 /* EventDetailsViewController.xib */; };
 		805B347226C43EC3008A3BC5 /* EventDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805B347126C43EC3008A3BC5 /* EventDetailsViewController.swift */; };
 		80DBCD3D26C02960004EC971 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DBCD3C26C02960004EC971 /* AppDelegate.swift */; };
@@ -44,6 +47,9 @@
 		800A2EC226C6B4760062042D /* EventLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventLocationViewController.swift; sourceTree = "<group>"; };
 		800A2EC826C6C1250062042D /* EventHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventHeaderView.xib; sourceTree = "<group>"; };
 		800A2ECA26C6C13B0062042D /* EventHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventHeaderView.swift; sourceTree = "<group>"; };
+		800A2ECF26C6C5560062042D /* NewsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsViewController.xib; sourceTree = "<group>"; };
+		800A2ED126C6C6170062042D /* NewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewModel.swift; sourceTree = "<group>"; };
+		800A2ED326C6C61F0062042D /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		805B346F26C43EBB008A3BC5 /* EventDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventDetailsViewController.xib; sourceTree = "<group>"; };
 		805B347126C43EC3008A3BC5 /* EventDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailsViewController.swift; sourceTree = "<group>"; };
 		80DBCD3926C02960004EC971 /* AnimeEvent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimeEvent.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -107,6 +113,16 @@
 				800A2ECA26C6C13B0062042D /* EventHeaderView.swift */,
 			);
 			path = EventHeaderView;
+			sourceTree = "<group>";
+		};
+		800A2ECD26C6C5140062042D /* News */ = {
+			isa = PBXGroup;
+			children = (
+				800A2ECF26C6C5560062042D /* NewsViewController.xib */,
+				800A2ED126C6C6170062042D /* NewsViewModel.swift */,
+				800A2ED326C6C61F0062042D /* NewsViewController.swift */,
+			);
+			path = News;
 			sourceTree = "<group>";
 		};
 		805B346E26C43BBA008A3BC5 /* EventDetails */ = {
@@ -175,6 +191,7 @@
 		80DBCD5226C02A66004EC971 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				800A2ECD26C6C5140062042D /* News */,
 				800A2EC626C6C1120062042D /* SharedComponents */,
 				800A2EBF26C6B4550062042D /* EventLocation */,
 				805B346E26C43BBA008A3BC5 /* EventDetails */,
@@ -355,6 +372,7 @@
 			files = (
 				80DBCD8D26C40D3A004EC971 /* EventCell.xib in Resources */,
 				80DBCD8526C2D0A3004EC971 /* ListFilterCell.xib in Resources */,
+				800A2ED026C6C5560062042D /* NewsViewController.xib in Resources */,
 				80DBCD7326C17242004EC971 /* ListHeaderCellView.xib in Resources */,
 				80DBCD4926C02962004EC971 /* LaunchScreen.storyboard in Resources */,
 				800A2EC926C6C1250062042D /* EventHeaderView.xib in Resources */,
@@ -380,6 +398,7 @@
 				80DBCD7826C1739B004EC971 /* UIColor.swift in Sources */,
 				80DBCD4126C02960004EC971 /* ViewController.swift in Sources */,
 				805B347226C43EC3008A3BC5 /* EventDetailsViewController.swift in Sources */,
+				800A2ED226C6C6170062042D /* NewsViewModel.swift in Sources */,
 				80DBCD3D26C02960004EC971 /* AppDelegate.swift in Sources */,
 				80DBCD5426C02AA9004EC971 /* XIBView.swift in Sources */,
 				80DBCD6C26C16763004EC971 /* ListEventsViewController.swift in Sources */,
@@ -390,6 +409,7 @@
 				80DBCD7526C17269004EC971 /* ListHeaderCellView.swift in Sources */,
 				80DBCD5B26C02BD1004EC971 /* Participant.swift in Sources */,
 				80DBCD8726C2D0AB004EC971 /* ListFilterCell.swift in Sources */,
+				800A2ED426C6C61F0062042D /* NewsViewController.swift in Sources */,
 				800A2ECB26C6C13B0062042D /* EventHeaderView.swift in Sources */,
 				80DBCD6E26C16832004EC971 /* ListEventsViewModel.swift in Sources */,
 			);

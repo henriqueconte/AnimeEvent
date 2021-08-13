@@ -61,7 +61,9 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="buttonsStack" destination="EeI-PA-i2c" id="nHX-iL-DSf"/>
                 <outlet property="searchBar" destination="fVk-w5-ydg" id="YCR-0e-dxA"/>
+                <outlet property="titleLabel" destination="OZS-U8-UVF" id="Y9w-Ea-FjG"/>
             </connections>
             <point key="canvasLocation" x="-81.159420289855078" y="-61.272321428571423"/>
         </tableViewCell>
