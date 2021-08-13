@@ -27,6 +27,7 @@ class EventDetailsViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
         navigationController?.navigationBar.isHidden = false
     }
     

@@ -81,4 +81,13 @@ extension NewsViewController: UITableViewDelegate {
             return 140
         }
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.row > 1,
+           let selectedNews: Event = viewModel?.newsList[indexPath.row - (viewModel?.uniqueCellsCount ?? 0)] {
+            let newsDetailsVC: NewsDetailsViewController = NewsDetailsViewController()
+            newsDetailsVC.setup(viewModel: NewsDetailsViewModel(news: selectedNews))
+            show(newsDetailsVC, sender: nil)
+        }
+    }
 }
