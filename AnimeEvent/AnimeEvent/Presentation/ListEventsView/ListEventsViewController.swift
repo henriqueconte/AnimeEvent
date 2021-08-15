@@ -57,6 +57,7 @@ extension ListEventsViewController: UITableViewDataSource {
 
         case 1:
             guard let cell: ListFilterCell = tableView.dequeueReusableCell(withIdentifier: ListFilterCell.identifier) as? ListFilterCell else { return UITableViewCell() }
+            cell.delegate = self
             return cell
         default:
             guard let cell: EventCell = tableView.dequeueReusableCell(withIdentifier: EventCell.identifier) as? EventCell,
@@ -86,6 +87,13 @@ extension ListEventsViewController: UITableViewDelegate {
             eventDetailsVC.setup(viewModel: EventDetailsViewModel(event: selectedEvent))
             show(eventDetailsVC, sender: nil)
         }
+    }
+}
+
+extension ListEventsViewController: SearchDelegate {
+    func textDidChange(newText: String) {
+        viewModel?.textSearched = newText
+        tableView.reloadData()
     }
 }
 

@@ -10,6 +10,7 @@ import Foundation
 class ListEventsViewModel {
     
     private let showOnlyFavorite: Bool
+    var textSearched: String = ""
     
     var eventList: [Event] {
         if showOnlyFavorite {
@@ -17,7 +18,11 @@ class ListEventsViewModel {
                 UserDefaults.standard.bool(forKey: $0.title)
             })
         } else {
-            return EventsMock.eventList
+            if textSearched.isEmpty {
+                return EventsMock.eventList
+            } else {
+                return EventsMock.eventList.filter({ $0.title.contains(textSearched) })
+            }
         }
         
     }
