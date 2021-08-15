@@ -26,14 +26,17 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         listEventsVC.setup(viewModel: ListEventsViewModel())
         let newsVC: NewsViewController = NewsViewController()
         newsVC.setup(viewModel: NewsViewModel())
+        let profileVC: ProfileViewController = ProfileViewController()
         
         listEventsVC.tabBarItem = UITabBarItem(title: "Home", image: UIImage(named: "home"), tag: 0)
         newsVC.tabBarItem = UITabBarItem(title: "Notícias", image: UIImage(named: "newspaper"), tag: 1)
         eventLocationVC.tabBarItem = UITabBarItem(title: "Local", image: UIImage(named: "map"), tag: 2)
+        profileVC.tabBarItem = UITabBarItem(title: "Perfil", image: UIImage(named: "profile"), tag: 3)
         tabBarController.setViewControllers([
             UINavigationController(rootViewController: listEventsVC),
             UINavigationController(rootViewController: newsVC),
-            eventLocationVC
+            eventLocationVC,
+            profileVC
         ], animated: false)
         window?.rootViewController = tabBarController
         window?.makeKeyAndVisible()
