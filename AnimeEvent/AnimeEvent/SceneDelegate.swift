@@ -23,19 +23,23 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let tabBarController: UITabBarController = UITabBarController()
         let eventLocationVC: EventLocationViewController = EventLocationViewController()
         let listEventsVC: ListEventsViewController = ListEventsViewController()
-        listEventsVC.setup(viewModel: ListEventsViewModel())
+        listEventsVC.setup(viewModel: ListEventsViewModel(showOnlyFavorite: false))
         let newsVC: NewsViewController = NewsViewController()
         newsVC.setup(viewModel: NewsViewModel())
+        let favoriteVC: FavoriteEventsViewController = FavoriteEventsViewController()
+        favoriteVC.setup(viewModel: ListEventsViewModel(showOnlyFavorite: true))
         let profileVC: ProfileViewController = ProfileViewController()
         
         listEventsVC.tabBarItem = UITabBarItem(title: "Home", image: UIImage(named: "home"), tag: 0)
         newsVC.tabBarItem = UITabBarItem(title: "Notícias", image: UIImage(named: "newspaper"), tag: 1)
         eventLocationVC.tabBarItem = UITabBarItem(title: "Local", image: UIImage(named: "map"), tag: 2)
-        profileVC.tabBarItem = UITabBarItem(title: "Perfil", image: UIImage(named: "profile"), tag: 3)
+        favoriteVC.tabBarItem = UITabBarItem(title: "Favoritos", image: UIImage(systemName: "heart"), tag: 3)
+        profileVC.tabBarItem = UITabBarItem(title: "Perfil", image: UIImage(named: "profile"), tag: 4)
         tabBarController.setViewControllers([
             UINavigationController(rootViewController: listEventsVC),
             UINavigationController(rootViewController: newsVC),
             eventLocationVC,
+            UINavigationController(rootViewController: favoriteVC),
             profileVC
         ], animated: false)
         window?.rootViewController = tabBarController

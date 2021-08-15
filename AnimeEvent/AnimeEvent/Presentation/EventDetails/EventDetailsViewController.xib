@@ -54,6 +54,9 @@
                                             <state key="normal">
                                                 <imageReference key="image" image="heart" catalog="system" symbolScale="large"/>
                                             </state>
+                                            <connections>
+                                                <action selector="favoriteButtonTouched:" destination="-1" eventType="touchUpInside" id="bir-cs-taD"/>
+                                            </connections>
                                         </button>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cosplayPoster_big" translatesAutoresizingMaskIntoConstraints="NO" id="4EW-O6-495">
                                             <rect key="frame" x="38" y="0.0" width="150" height="260"/>

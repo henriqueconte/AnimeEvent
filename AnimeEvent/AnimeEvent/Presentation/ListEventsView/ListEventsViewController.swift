@@ -22,6 +22,7 @@ class ListEventsViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         navigationController?.navigationBar.isHidden = true
+        tableView.reloadData()
     }
     
     func setup(viewModel: ListEventsViewModel) {

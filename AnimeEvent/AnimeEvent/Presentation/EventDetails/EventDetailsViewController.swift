@@ -38,7 +38,8 @@ class EventDetailsViewController: UIViewController {
     private func setupUI() {
         eventTitleLabel.text = viewModel?.eventTitle
         favoriteButton.setImage(UIImage(systemName: "heart.fill"), for: .selected)
-        favoriteButton.isSelected = viewModel?.isFavorite ?? false
+        favoriteButton.setImage(UIImage(systemName: "heart"), for: .normal)
+        favoriteButton.isSelected = UserDefaults.standard.bool(forKey: viewModel?.eventTitle ?? "")
         eventImage.image = UIImage(named: viewModel?.eventImagePath ?? "")
         eventDescriptionLabel.text = viewModel?.eventDescription
         eventInscriptionLabel.text = viewModel?.eventInscriptionInstructions
@@ -49,4 +50,10 @@ class EventDetailsViewController: UIViewController {
             eventImage.image = UIImage(named: "cosplayPoster_big")
         }
     }
+    
+    @IBAction func favoriteButtonTouched(_ sender: Any) {
+        favoriteButton.isSelected.toggle()
+        UserDefaults.standard.setValue(favoriteButton.isSelected, forKey: eventTitleLabel.text ?? "")
+    }
+    
 }

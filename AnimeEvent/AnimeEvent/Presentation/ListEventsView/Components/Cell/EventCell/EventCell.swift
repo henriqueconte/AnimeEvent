@@ -20,8 +20,9 @@ class EventCell: UITableViewCell {
     @IBOutlet weak private var shadowView: UIView!
     
     func setupEvent(event: Event) {
-        favoriteButton.setImage(UIImage(named: "heart.fill"), for: .selected)
-        favoriteButton.isSelected = event.isFavorite
+        favoriteButton.setImage(UIImage(systemName: "heart.fill"), for: .selected)
+        favoriteButton.setImage(UIImage(systemName: "heart"), for: .normal)
+        favoriteButton.isSelected = UserDefaults.standard.bool(forKey: event.title)
         eventImage.image = UIImage(named: event.locationPhotoPath)
         eventTitleLabel.text = event.title
         eventSubtitleLabel.text = event.subtitle
@@ -45,5 +46,10 @@ class EventCell: UITableViewCell {
         eventRoomLabel.font = .systemFont(ofSize: 12, weight: .light)
         rightColorView.backgroundColor = .white
         shadowView.setGradientBackground(topColor: UIColor.systemGray5.cgColor, bottomColor: UIColor.white.cgColor)
+    }
+    
+    @IBAction func favoriteButtonTouched(_ sender: Any) {
+        favoriteButton.isSelected.toggle()
+        UserDefaults.standard.setValue(favoriteButton.isSelected, forKey: eventTitleLabel.text ?? "")
     }
 }

@@ -14,7 +14,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         let listEventsVC: ListEventsViewController = ListEventsViewController()
-        listEventsVC.setup(viewModel: ListEventsViewModel())
+        listEventsVC.setup(viewModel: ListEventsViewModel(showOnlyFavorite: false))
         show(listEventsVC, sender: nil)
     }
 

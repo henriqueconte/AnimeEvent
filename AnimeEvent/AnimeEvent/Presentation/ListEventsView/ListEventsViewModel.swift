@@ -9,8 +9,17 @@ import Foundation
 
 class ListEventsViewModel {
     
+    private let showOnlyFavorite: Bool
+    
     var eventList: [Event] {
-        return EventsMock.eventList
+        if showOnlyFavorite {
+            return EventsMock.eventList.filter({
+                UserDefaults.standard.bool(forKey: $0.title)
+            })
+        } else {
+            return EventsMock.eventList
+        }
+        
     }
     
     var uniqueCellsCount: Int {
@@ -19,5 +28,9 @@ class ListEventsViewModel {
     
     var numberOfRows: Int {
         return uniqueCellsCount + eventList.count
+    }
+    
+    init(showOnlyFavorite: Bool) {
+        self.showOnlyFavorite = showOnlyFavorite
     }
 }
