@@ -33,9 +33,35 @@ class ListEventsViewController: UIViewController {
         tableView.register(ListHeaderCellView.nib, forCellReuseIdentifier: ListHeaderCellView.identifier)
         tableView.register(ListFilterCell.nib, forCellReuseIdentifier: ListFilterCell.identifier)
         tableView.register(EventCell.nib, forCellReuseIdentifier: EventCell.identifier)
+        let appearence: UINavigationBarAppearance = UINavigationBarAppearance()
+        appearence.configureWithOpaqueBackground()
+        appearence.backgroundColor = UIColor.ANIME.customRed
+        navigationController?.navigationBar.standardAppearance = appearence
+        navigationController?.navigationBar.scrollEdgeAppearance = appearence
         navigationController?.navigationBar.barTintColor = UIColor.ANIME.customRed
         navigationController?.navigationBar.tintColor = .white
         navigationController?.navigationBar.isTranslucent = false
+        
+        let tabBarAppearence: UITabBarAppearance = UITabBarAppearance()
+        tabBarAppearence.configureWithOpaqueBackground()
+        tabBarAppearence.backgroundColor = UIColor.ANIME.customRed
+        
+        let tabBarItemAppearence: UITabBarItemAppearance = UITabBarItemAppearance()
+        tabBarItemAppearence.normal.iconColor = .systemGray4
+        tabBarItemAppearence.selected.iconColor = .white
+        tabBarItemAppearence.normal.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.systemGray3]
+        
+        tabBarAppearence.inlineLayoutAppearance = tabBarItemAppearence
+        tabBarAppearence.compactInlineLayoutAppearance = tabBarItemAppearence
+        tabBarAppearence.stackedLayoutAppearance = tabBarItemAppearence
+        
+        tabBarController?.tabBar.standardAppearance = tabBarAppearence
+//        tabBarController?.tabBarItem.standardAppearance = tabBarAppearence
+        if #available(iOS 15.0, *) {
+            tabBarController?.tabBar.scrollEdgeAppearance = tabBarAppearence
+//            tabBarController?.tabBarItem. = tabBarAppearence
+        }
+        
         tabBarController?.tabBar.isTranslucent = false
         tabBarController?.tabBar.barTintColor = UIColor.ANIME.customRed
         tabBarController?.tabBar.tintColor = .white

@@ -35,10 +35,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         eventLocationVC.tabBarItem = UITabBarItem(title: "Local", image: UIImage(named: "map"), tag: 2)
         favoriteVC.tabBarItem = UITabBarItem(title: "Favoritos", image: UIImage(systemName: "heart"), tag: 3)
         profileVC.tabBarItem = UITabBarItem(title: "Perfil", image: UIImage(named: "profile"), tag: 4)
+//        tabBarController.setViewControllers([
+//            UINavigationController(rootViewController: listEventsVC),
+//            UINavigationController(rootViewController: newsVC),
+//            eventLocationVC,
+//            UINavigationController(rootViewController: favoriteVC),
+//            profileVC
+//        ], animated: false)
         tabBarController.setViewControllers([
             UINavigationController(rootViewController: listEventsVC),
-            UINavigationController(rootViewController: newsVC),
-            eventLocationVC,
             UINavigationController(rootViewController: favoriteVC),
             profileVC
         ], animated: false)

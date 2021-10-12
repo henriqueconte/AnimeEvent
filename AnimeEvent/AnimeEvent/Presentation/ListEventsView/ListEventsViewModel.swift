@@ -21,7 +21,7 @@ class ListEventsViewModel {
             if textSearched.isEmpty {
                 return EventsMock.eventList
             } else {
-                return EventsMock.eventList.filter({ $0.title.contains(textSearched) })
+                return EventsMock.eventList.filter({ $0.title.lowercased().contains(textSearched.lowercased()) })
             }
         }
         
